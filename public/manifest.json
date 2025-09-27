@@ -1,0 +1,14 @@
+{
+  "name": "CreatorVerse",
+  "description": "CreatorVerse is a Base Mini App built with Zara.",
+  "image": "https://dummyimage.com/1200x628/0a0b0d/ffffff.png&text=OG",
+  "external_url": "https://a6c75fc5-d5db-4981-9ce8-d8fc78e7ac82.vercel.app",
+  "properties": {
+    "app": {
+      "name": "CreatorVerse",
+      "description": "CreatorVerse is a Base Mini App built with Zara.",
+      "url": "https://a6c75fc5-d5db-4981-9ce8-d8fc78e7ac82.vercel.app",
+      "icon": "https://0co.to/images/zara-2.png"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "CreatorVerse",
+    "subtitle": "Built with Zara",
+    "description": "CreatorVerse is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://a6c75fc5d5db49819ce8d8fc78e7ac82-hf1n.vercel.app",
+    "splashImageUrl": "https://a6c75fc5d5db49819ce8d8fc78e7ac82-hf1n.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://a6c75fc5d5db49819ce8d8fc78e7ac82-hf1n.vercel.app/image.png",
+    "tagline": "CreatorVerse",
+    "screenshotUrls": [
+      "https://a6c75fc5d5db49819ce8d8fc78e7ac82-hf1n.vercel.app/screenshot.png",
+      "https://a6c75fc5d5db49819ce8d8fc78e7ac82-hf1n.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://a6c75fc5d5db49819ce8d8fc78e7ac82-hf1n.vercel.app/api/webhook"
+  }
+}
