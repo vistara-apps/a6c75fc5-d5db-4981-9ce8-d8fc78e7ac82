@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* CreatorVerse Cyberpunk Gaming Theme */
+  --color-bg: #0a0a0f;
+  --color-fg: #ffffff;
+  --color-accent: #00ff41;
+  --color-accent-secondary: #ff0080;
+  --color-surface: #1a1a2e;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a0a0a0;
+  --color-border: #333366;
+}
+
+[data-theme="celo"] {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+  --color-accent: #fbcc5c;
+  --color-accent-secondary: #35d07f;
+  --color-surface: #1a1a1a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #cccccc;
+  --color-border: #333333;
+}
+
+[data-theme="solana"] {
+  --color-bg: #1a0d2e;
+  --color-fg: #ffffff;
+  --color-accent: #9945ff;
+  --color-accent-secondary: #14f195;
+  --color-surface: #2d1b4e;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b8a9d9;
+  --color-border: #4c2a85;
+}
+
+[data-theme="base"] {
+  --color-bg: #0052ff;
+  --color-fg: #ffffff;
+  --color-accent: #0052ff;
+  --color-accent-secondary: #00d4ff;
+  --color-surface: #1a4fff;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #ccddff;
+  --color-border: #3366ff;
+}
+
+[data-theme="coinbase"] {
+  --color-bg: #0a1426;
+  --color-fg: #ffffff;
+  --color-accent: #0052ff;
+  --color-accent-secondary: #1652f0;
+  --color-surface: #1a2332;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #8a9ba8;
+  --color-border: #2d3748;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-bg text-fg font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(0, 255, 65, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 0, 128, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(0, 255, 65, 0.05) 0%, transparent 50%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-primary;
+  }
+
+  p {
+    @apply text-text-secondary;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface bg-opacity-20 backdrop-blur-md border border-border rounded-lg;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .neon-border {
+    border: 1px solid var(--color-accent);
+    box-shadow: 
+      0 0 5px var(--color-accent),
+      inset 0 0 5px rgba(0, 255, 65, 0.1);
+  }
+
+  .cyber-button {
+    @apply relative overflow-hidden bg-surface border-2 border-accent text-accent font-bold py-3 px-6 transition-all duration-300;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
+  }
+
+  .cyber-button:hover {
+    @apply bg-accent text-bg;
+    box-shadow: 0 0 20px var(--color-accent);
+  }
+
+  .cyber-button::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 transition-opacity duration-300;
+    transform: translateX(-100%);
+  }
+
+  .cyber-button:hover::before {
+    @apply opacity-30;
+    animation: shimmer 0.6s ease-out;
+  }
+
+  .template-card {
+    @apply glass-card p-4 hover:border-accent transition-all duration-300 cursor-pointer;
+  }
+
+  .template-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 255, 65, 0.2);
+  }
+
+  .nft-glow {
+    @apply relative;
+  }
+
+  .nft-glow::after {
+    content: '';
+    @apply absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300;
+    background: linear-gradient(45deg, var(--color-accent), var(--color-accent-secondary));
+    filter: blur(20px);
+    z-index: -1;
+  }
+
+  .nft-glow:hover::after {
+    @apply opacity-30;
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
